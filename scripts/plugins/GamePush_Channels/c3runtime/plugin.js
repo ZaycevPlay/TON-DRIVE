@@ -1,0 +1,1 @@
+globalThis.C3.Plugins.GamePush_Channels=class extends globalThis.ISDKPluginBase{constructor(s){super(s,"GamePush_Channels")}Release(){super.Release()}};

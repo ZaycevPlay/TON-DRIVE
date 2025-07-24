@@ -1,0 +1,1 @@
+globalThis.C3.Plugins.GamePush_Channels.Type=class extends globalThis.ISDKObjectTypeBase{constructor(e){super(e)}Release(){super.Release()}OnCreate(){}};
