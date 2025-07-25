@@ -404,12 +404,13 @@ self.C3_JsPropNameTable = [
 	{GamePushChannels: 0},
 	{Якорь: 0},
 	{Mute: 0},
+	{txtusdt: 0},
+	{USDT: 0},
 	{Referral_level1: 0},
 	{Referral_level2: 0},
 	{Referral_level3: 0},
 	{check_if_registered: 0},
 	{referral_earndr: 0},
-	{USDT: 0},
 	{MINIFOR_oil: 0},
 	{Minifor_health: 0},
 	{SOLDON_oil: 0},
@@ -716,5 +717,7 @@ self.InstanceType = {
 	надписьdrive: class extends self.ITextInstance {},
 	фото: class extends self.ISpriteInstance {},
 	GamePushChannels: class extends C3.Plugins.GamePush_Channels.Instance {},
-	Mute: class extends self.ISpriteInstance {}
+	Mute: class extends self.ISpriteInstance {},
+	txtusdt: class extends self.ITextInstance {},
+	USDT: class extends self.ISpriteInstance {}
 }
