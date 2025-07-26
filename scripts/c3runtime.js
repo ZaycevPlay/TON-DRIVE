@@ -1259,6 +1259,10 @@ function or(l, r)
 self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("usdt");
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0("drive-token");
 		},
 		p => {
@@ -1449,7 +1453,6 @@ self.C3_ExpressionFuncs = [
 		() => "Такса",
 		() => "Заправка",
 		() => "Заезд",
-		() => "Главный",
 		() => "Анимация 2",
 		() => 19999,
 		p => {
@@ -1560,7 +1563,6 @@ self.C3_ExpressionFuncs = [
 		() => "minor_oil",
 		() => "vovias4x4_oil",
 		() => "karal_oil",
-		() => 10,
 		() => 3,
 		() => "No car to repair",
 		() => "1500 DR",
@@ -1650,6 +1652,7 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => ((n0.ExpInstVar() * 120) + 65);
 		},
+		() => 10,
 		() => -1,
 		p => {
 			const n0 = p._GetNode(0);
@@ -1681,8 +1684,12 @@ self.C3_ExpressionFuncs = [
 			return () => and(Math.round(v0.GetValue()), " DR");
 		},
 		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => and(v0.GetValue(), " USDT");
+		},
+		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0(3);
+			return () => f0(6);
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -1710,6 +1717,9 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => ((n0.ExpInstVar() / 4) * 3);
 		},
+		() => "usdt",
+		() => 5,
+		() => 30,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => and(v0.GetValue(), " DR/h");
@@ -1782,7 +1792,6 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() - 55.55);
 		},
-		() => -10,
 		() => 53,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -1844,7 +1853,6 @@ self.C3_ExpressionFuncs = [
 		},
 		() => "https://t.me/TonDriveOfficialRu",
 		() => "Checking",
-		() => 5,
 		() => "task1_status",
 		() => "https://t.me/TonDriveChatRu",
 		() => "task2_status",
